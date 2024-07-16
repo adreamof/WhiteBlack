@@ -15,6 +15,12 @@ async function get_task() {
     });
 }
 
+function send_email_click() {
+    return invoke("send_email_click").then((res) => {
+        console.log(res);
+    })
+}
+
 onMounted(() => {
 
 });
@@ -41,8 +47,8 @@ onMounted(() => {
                     <q-card class="my-card" flat bordered>
                         <q-card-section horizontal>
                             <q-card-section class="q-pt-xs">
-                                <div class="text-overline">整合包名称</div>
-                                <div class="text-h5 q-mt-sm q-mb-xs">圆环之理</div>
+                                <div class="text-overline">发送邮件</div>
+                                <q-btn class="col-2 q-mt-sm q-mb-xs" color="blue" label="发送邮件" @click="send_email_click" />
                                 <div class="text-caption text-grey">
                                     测试内容: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium
                                     molestias a
